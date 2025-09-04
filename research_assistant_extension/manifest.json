@@ -1,0 +1,28 @@
+{
+  "name": "Research Assistant Extensions",
+  "description": "Base Level Extension for AI Based Research Assistant",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions":[
+    "activeTab",
+    "storage",
+    "sidePanel",
+    "scripting"
+  ],
+  "action": {
+    "default_title":"Research Assistant"
+  },
+  "side_panel": {
+    "default_path":"sidePanel.html"
+  },
+  "background":{
+    "service_worker":"background.js"
+  },
+  "host_permissions":[
+    "http://localhost:8082/*",
+    "<all_urls>"
+  ],
+  "content_security_policy":{
+    "extension_pages":"script-src 'self'; object-src 'self'"
+  }
+}
